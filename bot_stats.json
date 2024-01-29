@@ -1,0 +1,12 @@
+[
+  {
+    "token": "YOUR_BOT_TOKEN_1",
+    "message_count": 0,
+    "chat_ids_sent": []
+  },
+  {
+    "token": "YOUR_BOT_TOKEN_2",
+    "message_count": 0,
+    "chat_ids_sent": []
+  }
+]
