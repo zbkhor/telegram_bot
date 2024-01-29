@@ -3,6 +3,7 @@ import random
 import time
 import logging
 import threading
+import itertools
 
 class TelegramBot:
     counters_lock = threading.Lock()
@@ -16,9 +17,12 @@ class TelegramBot:
 
     def send_random_string(self, chat_ids, strings, send_interval):
         try:
+            chat_ids_cycle = itertools.cycle(chat_ids)  # Create an iterator for round-robin
+            strings_cycle = itertools.cycle(strings)  # Create an iterator for round-robin
+
             while True:
-                chat_id = random.choice(chat_ids)
-                message = random.choice(strings)
+                chat_id = next(chat_ids_cycle)  # Get the next chat_id in the round-robin sequence
+                message = next(strings_cycle)  # Get the next message in the round-robin sequence
 
                 # Log the bot, chat_id, and message before sending
                 logging.info(f"Bot {self.token} sending message to chat_id {chat_id}")
@@ -31,6 +35,7 @@ class TelegramBot:
 
                 logging.info(f"Interval: {send_interval}")
                 time.sleep(send_interval)
+
         except telebot.apihelper.ApiException as api_error:
             logging.error(f"Telegram API error: {api_error}")
         except KeyboardInterrupt:
