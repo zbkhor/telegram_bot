@@ -1,50 +1,50 @@
 [
   {
     "token": "5753903548:AAGzb92AMdhYEYMy_b0zMA0xUEEsX2qQaEk",
-    "message_count": 12,
+    "message_count": 6,
     "chat_id_occurrences": {
-      "-856941379": 6,
-      "-4117172640": 6
+      "-856941379": 3,
+      "-4117172640": 3
     }
   },
   {
     "token": "6703426544:AAHowvJhuVV4IkdguYT2iS7TuRQWX3UGSK0",
-    "message_count": 12,
+    "message_count": 6,
     "chat_id_occurrences": {
-      "-856941379": 6,
-      "-4117172640": 6
+      "-856941379": 3,
+      "-4117172640": 3
     }
   },
   {
     "token": "6887431223:AAEJc4s3t_hA7DxrcO-k0NvqtgrkjPUMexU",
-    "message_count": 12,
+    "message_count": 4,
     "chat_id_occurrences": {
-      "-856941379": 6,
-      "-4117172640": 6
+      "-856941379": 2,
+      "-4117172640": 2
     }
   },
   {
     "token": "6787601158:AAE4N-FWjAyE3NHKGD35nVnHt-c-o6Ptedo",
-    "message_count": 11,
+    "message_count": 4,
     "chat_id_occurrences": {
-      "-856941379": 6,
-      "-4117172640": 5
+      "-856941379": 2,
+      "-4117172640": 2
     }
   },
   {
     "token": "6371828828:AAErfPToRZwoyFTcZ1jnwGRUbbg5_rlKp9M",
-    "message_count": 11,
+    "message_count": 4,
     "chat_id_occurrences": {
-      "-856941379": 6,
-      "-4117172640": 5
+      "-856941379": 2,
+      "-4117172640": 2
     }
   },
   {
     "token": "6763843999:AAGPRm9iB_GyyTKW7q6M3pY_BDA7YAUzJwU",
-    "message_count": 11,
+    "message_count": 4,
     "chat_id_occurrences": {
-      "-856941379": 6,
-      "-4117172640": 5
+      "-856941379": 2,
+      "-4117172640": 2
     }
   }
 ]

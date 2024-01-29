@@ -40,47 +40,47 @@ bot_tokens = {
 }
 
 # Use Constants
-SEND_INTERVAL_1 = 10
-SEND_INTERVAL_2 = 10
+SEND_INTERVAL_1 = 15
+SEND_INTERVAL_2 = 15
 # Define Bot Configurations
 Yuyuna = {
     "token": bot_tokens['Yuyuna'],
     "chat_ids": [chat_ids['test'],chat_ids['test2']],
-    "strings": [paragraph1],    
+    "strings": [paragraph1,paragraph10,paragraph11],    
     "send_interval": SEND_INTERVAL_1
 }
 
 Chloe = {
     "token": bot_tokens['Chloe'],
     "chat_ids": [chat_ids['test'],chat_ids['test2']],
-    "strings": [paragraph1],
+    "strings": [paragraph1,paragraph10,paragraph11],
     "send_interval": SEND_INTERVAL_1
 }
 
 Seraphine = {
     "token": bot_tokens['Seraphine'],
     "chat_ids": [chat_ids['test'],chat_ids['test2']],
-    "strings": [paragraph1],
+    "strings": [paragraph1,paragraph10,paragraph11],
     "send_interval": SEND_INTERVAL_1  # Adjust as needed
 }
 
 Celeste = {
     "token": bot_tokens['Celeste'],
     "chat_ids": [chat_ids['test'],chat_ids['test2']],
-    "strings": [paragraph1],
+    "strings": [paragraph1,paragraph10,paragraph11],
     "send_interval": SEND_INTERVAL_1  # Adjust as needed
 }
 
 Scarlett = {
     "token": bot_tokens['Scarlett'],
     "chat_ids": [chat_ids['test'],chat_ids['test2']],
-    "strings": [paragraph1],
+    "strings": [paragraph1,paragraph10,paragraph11],
     "send_interval": SEND_INTERVAL_1  # Adjust as needed
 }
 Camila = {
     "token": bot_tokens['Camila'],
     "chat_ids": [chat_ids['test'],chat_ids['test2']],
-    "strings": [paragraph1],
+    "strings": [paragraph1,paragraph10,paragraph11],
     "send_interval": SEND_INTERVAL_1  # Adjust as needed
 }
 

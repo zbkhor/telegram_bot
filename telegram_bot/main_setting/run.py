@@ -12,13 +12,12 @@ import logging
 
 def create_and_run_bot(config):
     bot = TelegramBot(config['token'])
-    thread = threading.Thread(target=bot.send_random_string, args=(config['chat_ids'], config['strings'], config['send_interval']))
-    
+    thread = threading.Thread(target=bot.send_random_strings, args=(config['chat_ids'], config['strings'], config['send_interval']))
     thread.daemon = True  # Set the thread as daemon
     thread.start()
-    
+
     logging.info(f"Thread {thread.name} created and started for bot {config['token']}")
-    
+
     return thread
 
 
@@ -46,12 +45,12 @@ if __name__ == "__main__":
             bot = TelegramBot(config['token'])
             bots.append(bot)
 
-        # Start threads
+        bot_index = 0  # Initialize bot_index
         for bot, config in zip(bots, bot_configs):
-            thread = threading.Thread(target=bot.send_random_string,
-                                      args=(config['chat_ids'], config['strings'], config['send_interval']))
+            thread = threading.Thread(target=bot.send_random_strings, args=(config['chat_ids'], config['strings'], config['send_interval'], bot_index))
             thread.start()
             threads.append(thread)
+            bot_index += 1  # Increment bot_index for the next bot
             time.sleep(THREAD_START_INTERVAL)
 
         count = 0
