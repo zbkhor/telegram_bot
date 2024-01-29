@@ -12,7 +12,7 @@ class TelegramBot:
         self.bot = telebot.TeleBot(token)
         self.token = token
         self.message_count = 0
-        self.chat_ids_sent = set()
+        self.chat_id_occurrences = {}
 
     def send_random_string(self, chat_ids, strings, send_interval):
         try:
@@ -25,11 +25,7 @@ class TelegramBot:
 
                 # Update counters
                 with self.counters_lock:
-                    self.increment_counter()
-                    # print(f"After increment - Bot {self.token} - Global Counters: {self.global_counters}")
-                    # print(f"Bot {self.token} - Message Count: {self.message_count}")
-
-                self.chat_ids_sent.add(chat_id)
+                    self.increment_counter(chat_id)
 
                 self.bot.send_message(chat_id, message)
 
@@ -40,19 +36,15 @@ class TelegramBot:
         except KeyboardInterrupt:
             logging.info("Thread interrupted. Exiting gracefully.")
 
-
-    def increment_counter(self):
-        # print(f"Before increment - Global Counters: {self.global_counters}")
-        if self.token not in self.global_counters:
-            self.global_counters[self.token] = 0
-        self.global_counters[self.token] += 1
-        self.message_count = self.global_counters[self.token]
-        # print(f"After increment - Global Counters: {self.global_counters}")
-        # print(f"Bot {self.token} - Message Count: {self.message_count}")
+    def increment_counter(self, chat_id):
+        if chat_id not in self.chat_id_occurrences:
+            self.chat_id_occurrences[chat_id] = 0
+        self.chat_id_occurrences[chat_id] += 1
+        self.message_count += 1
 
     def get_bot_stats(self):
         return {
             'token': self.token,
             'message_count': self.message_count,
-            'chat_ids_sent': list(self.chat_ids_sent)
+            'chat_id_occurrences': self.chat_id_occurrences
         }

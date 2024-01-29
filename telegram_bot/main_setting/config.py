@@ -40,9 +40,8 @@ bot_tokens = {
 }
 
 # Use Constants
-SEND_INTERVAL_1 = 1
-SEND_INTERVAL_2 = 1
-
+SEND_INTERVAL_1 = 10
+SEND_INTERVAL_2 = 10
 # Define Bot Configurations
 Yuyuna = {
     "token": bot_tokens['Yuyuna'],
@@ -55,7 +54,7 @@ Chloe = {
     "token": bot_tokens['Chloe'],
     "chat_ids": [chat_ids['test'],chat_ids['test2']],
     "strings": [paragraph1],
-    "send_interval": SEND_INTERVAL_2
+    "send_interval": SEND_INTERVAL_1
 }
 
 Seraphine = {
@@ -69,7 +68,7 @@ Celeste = {
     "token": bot_tokens['Celeste'],
     "chat_ids": [chat_ids['test'],chat_ids['test2']],
     "strings": [paragraph1],
-    "send_interval": SEND_INTERVAL_2  # Adjust as needed
+    "send_interval": SEND_INTERVAL_1  # Adjust as needed
 }
 
 Scarlett = {
