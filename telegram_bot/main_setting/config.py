@@ -36,7 +36,7 @@ bot_tokens = {
     'Seraphine': '6887431223:AAEJc4s3t_hA7DxrcO-k0NvqtgrkjPUMexU',
     'Celeste': '6787601158:AAE4N-FWjAyE3NHKGD35nVnHt-c-o6Ptedo',
     'Scarlett': '6371828828:AAErfPToRZwoyFTcZ1jnwGRUbbg5_rlKp9M',
-    'Camila': '6763843999:AAGPRm9iB_GyyTKW7q6M3pY_BDA7YAUzJwU',
+    'Camila': '6763843999:AAGPRm9iB_GyyTKW7q6M3pY_BDA7YAUzJwU'
 }
 
 # Use Constants
@@ -84,9 +84,14 @@ Camila = {
     "send_interval": SEND_INTERVAL_1  # Adjust as needed
 }
 
+Camila = {
+    "token": bot_tokens['Camila'],
+    "chat_ids": [chat_ids['test'],chat_ids['test2']],
+    "strings": [paragraph1,paragraph10,paragraph11],
+    "send_interval": SEND_INTERVAL_1  # Adjust as needed
+}
 # Create a List of Bot Configurations
 chat_configs = [Yuyuna, Chloe, Seraphine , Celeste, Scarlett, Camila]
-# chat_configs = [Yuyuna, Chloe]
 # Create a List of Bot Configurations
 script_dir = os.path.dirname(__file__)
 config_file_path = os.path.join(script_dir, 'bot_configs.json')

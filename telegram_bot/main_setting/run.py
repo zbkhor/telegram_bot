@@ -31,7 +31,7 @@ if __name__ == "__main__":
     bot_configs = load_bot_configs('./bot_configs.json')
 
     THREAD_START_INTERVAL = 3
-    ADDITIONAL_SLEEP_INTERVAL = 3
+    ADDITIONAL_SLEEP_INTERVAL = 10
     ITERATION_LIMIT = 20
 
     threads = []
