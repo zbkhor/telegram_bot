@@ -4,28 +4,15 @@ from paragraph import *
 
 # Separate Configuration Data
 chat_ids = {
-    'Boost': '-1001717957483',
-    'Disposable': '-1001609338640',
     'sgvapezone': '-1001657320674',
-    'VapehouseSG': '-1001308014353',
-    'Vapehub': '-1001538107939',
-    'VapePink': '-1001863158882',
-    'VapeStation': '-1001685607433',
-    'Bot': '-1001858159747',
-    'Burning': '-1001566875450',
-    'Karang': '-1001377220878',
-    'LaunchingJuice': '-1001563439060',
-    'SmokeDif': '-1001578412666',
-    'SmokingFree': '-1001558933327',
-    'ZooSingapore': '-1001519018057',
     'Merlion': '-1001858159747',
-    'vapeparty': '-1001560725742',
-    'happyvape': '-1001456831308',
-    'pasarvape': '-1001693067994',
-    'sgvape': '-1001793825702',
-    'sgnightmarket': '-1001633391960',
-    'vapestar': '-1001945472874',
     'realsgsupplier': '-1001781627788',
+    'Disposable': '-1001609338640',
+    'VapeStation': '-1001685607433',
+    'Burning': '-1001566875450',
+    'Vapehub': '-1001538107939',
+    'vapestar': '-1001945472874',
+    'VapePink': '-1001863158882'
 }
 
 bot_tokens = {
@@ -34,7 +21,10 @@ bot_tokens = {
     'Seraphine': '6887431223:AAEJc4s3t_hA7DxrcO-k0NvqtgrkjPUMexU',
     'Celeste': '6787601158:AAE4N-FWjAyE3NHKGD35nVnHt-c-o6Ptedo',
     'Scarlett': '6371828828:AAErfPToRZwoyFTcZ1jnwGRUbbg5_rlKp9M',
-    'Camila': '6763843999:AAGPRm9iB_GyyTKW7q6M3pY_BDA7YAUzJwU'
+    'Camila': '6763843999:AAGPRm9iB_GyyTKW7q6M3pY_BDA7YAUzJwU',
+    'Merlion': '6080654541:AAEa1upiGaQdcZJlLx4b4lRNJwAF7AOAzNs',
+    'ElisePunPun': '5977569107:AAEtBZHFtkRUenVFztayXKvHf0pYC-371kU',
+    'VapeSingapore': '6194098995:AAG4BMmq3YdxRw4nH9C9540r0Npw0I1kqQs'
 }
 # Use Constants
 SEND_INTERVAL_1 = 15
