@@ -26,8 +26,6 @@ chat_ids = {
     'sgnightmarket': '-1001633391960',
     'vapestar': '-1001945472874',
     'realsgsupplier': '-1001781627788',
-    'test': '-856941379',
-    'test2':'-4117172640'
 }
 
 bot_tokens = {
@@ -38,60 +36,24 @@ bot_tokens = {
     'Scarlett': '6371828828:AAErfPToRZwoyFTcZ1jnwGRUbbg5_rlKp9M',
     'Camila': '6763843999:AAGPRm9iB_GyyTKW7q6M3pY_BDA7YAUzJwU'
 }
-
 # Use Constants
 SEND_INTERVAL_1 = 15
-SEND_INTERVAL_2 = 15
-# Define Bot Configurations
-Yuyuna = {
-    "token": bot_tokens['Yuyuna'],
-    "chat_ids": [chat_ids['test'],chat_ids['test2']],
-    "strings": [paragraph1,paragraph10,paragraph11],    
-    "send_interval": SEND_INTERVAL_1
-}
 
-Chloe = {
-    "token": bot_tokens['Chloe'],
-    "chat_ids": [chat_ids['test'],chat_ids['test2']],
-    "strings": [paragraph1,paragraph10,paragraph11],
-    "send_interval": SEND_INTERVAL_1
-}
+# Create Bot Configurations
+chat_configs = []
 
-Seraphine = {
-    "token": bot_tokens['Seraphine'],
-    "chat_ids": [chat_ids['test'],chat_ids['test2']],
-    "strings": [paragraph1,paragraph10,paragraph11],
-    "send_interval": SEND_INTERVAL_1  # Adjust as needed
-}
+for bot_name, token in bot_tokens.items():
+    # Automatically insert all chat IDs into each bot's chat_ids list
+    bot_config = {
+        "token": token,
+        "chat_ids": list(chat_ids.values()),  # Insert all chat IDs
+        "strings": [paragraph1, paragraph10, paragraph11],
+        "send_interval": SEND_INTERVAL_1
+    }
+    
+    # Append the bot configuration to the list
+    chat_configs.append(bot_config)
 
-Celeste = {
-    "token": bot_tokens['Celeste'],
-    "chat_ids": [chat_ids['test'],chat_ids['test2']],
-    "strings": [paragraph1,paragraph10,paragraph11],
-    "send_interval": SEND_INTERVAL_1  # Adjust as needed
-}
-
-Scarlett = {
-    "token": bot_tokens['Scarlett'],
-    "chat_ids": [chat_ids['test'],chat_ids['test2']],
-    "strings": [paragraph1,paragraph10,paragraph11],
-    "send_interval": SEND_INTERVAL_1  # Adjust as needed
-}
-Camila = {
-    "token": bot_tokens['Camila'],
-    "chat_ids": [chat_ids['test'],chat_ids['test2']],
-    "strings": [paragraph1,paragraph10,paragraph11],
-    "send_interval": SEND_INTERVAL_1  # Adjust as needed
-}
-
-Camila = {
-    "token": bot_tokens['Camila'],
-    "chat_ids": [chat_ids['test'],chat_ids['test2']],
-    "strings": [paragraph1,paragraph10,paragraph11],
-    "send_interval": SEND_INTERVAL_1  # Adjust as needed
-}
-# Create a List of Bot Configurations
-chat_configs = [Yuyuna, Chloe, Seraphine , Celeste, Scarlett, Camila]
 # Create a List of Bot Configurations
 script_dir = os.path.dirname(__file__)
 config_file_path = os.path.join(script_dir, 'bot_configs.json')
