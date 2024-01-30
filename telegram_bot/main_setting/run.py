@@ -1,12 +1,6 @@
 import time
 import threading
 import json
-from telebot_file import *
-import logging
-
-import time
-import threading
-import json
 from telebot_file import TelegramBot
 import logging
 
@@ -20,12 +14,9 @@ def create_and_run_bot(config):
 
     return thread
 
-
 def load_bot_configs(filename):
     with open(filename, 'r') as file:
         return json.load(file)
-
-# ... (previous code)
 
 if __name__ == "__main__":
     bot_configs = load_bot_configs('./bot_configs.json')
@@ -37,7 +28,9 @@ if __name__ == "__main__":
     threads = []
     bots = []  # Create a list to hold instances of TelegramBot
 
-    logging.basicConfig(level=logging.INFO)
+    # Configure logging to write to a file
+    log_file_path = 'bot_log.txt'
+    logging.basicConfig(filename=log_file_path, level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
     try:
         # Create instances of TelegramBot outside the loop
